@@ -101,7 +101,7 @@ sub list_articles{
 			}
 		}
 
-		print 'pageid='.$output[0][2].'|title='.$output[0][0].'\n';
+		print 'pageid='.$output[0][2].'|title='.$output[0][0]."\n";
 	}
 }
 
@@ -129,15 +129,15 @@ sub mark_article_done{
 sub show_usage{
 	my $request = shift;
 	print $request->header(-type => 'text/text');
-	print 'This script can be used with the following parameters:\n';
-	print '  project=... : name of the project (enwiki, ...)\n';
-	print '  id=... : id of improvement\n';
-	print '  action=... : action requested, among the following values:\n';
-	print '    list: list articles for the given improvement. The following parameters can also be used:\n';
-	print '      offset=... : offset in the list of articles\n';
-	print '      limit=... : maximum number of articles in the list\n';
-	print '    mark: mark an article as fixed for the given improvement. The following parameters can also be used:\n';
-	print '      pageid=... : page identifier of the article that has been fixed\n';
+	print 'This script can be used with the following parameters:'."\n";
+	print '  project=... : name of the project (enwiki, ...)'."\n";
+	print '  id=... : id of improvement'."\n";
+	print '  action=... : action requested, among the following values:'."\n";
+	print '    list: list articles for the given improvement. The following parameters can also be used:'."\n";
+	print '      offset=... : offset in the list of articles'."\n";
+	print '      limit=... : maximum number of articles in the list'."\n";
+	print '    mark: mark an article as fixed for the given improvement. The following parameters can also be used:'."\n";
+	print '      pageid=... : page identifier of the article that has been fixed'."\n";
 }
 
 
